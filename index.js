@@ -19,8 +19,7 @@ const monologueLines = [
 
 const totalBatteries = batteryBatches.reduce((total, batch) => total + batch, 0);
 
-const wordCounter = function(sentence) {
-  return sentence.split(' ').length
-}
 
-const wordCountMap = monologueLines();
+const wordCountMap = monologueLines.reduce((map, sentence) => {
+  const wordCount = sentence.split(' ').length
+}, {});
